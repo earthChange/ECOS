@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <title>ECOS</title>
+  <meta name="description" content="Earth Change Operating System"/>
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <!-- TODO: Use cached fonts
+       –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"/>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="img/favicon.png"/>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css"/>
+  <link rel="stylesheet" href="css/skeleton.css"/>
+
+  <!-- JS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script async src="js/index.js"></script>
+
+  <!-- Manifest
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="manifest" href="/manifest.json"/>
+
+  <!-- Service Worker registration
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script async type="text/javascript">
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/serviceworker.js', {scope: '/static_pwa_boilerplate/'})
+      .then(function(registration) {
+        registration.addEventListener('updatefound', function() {
+          var installingWorker = registration.installing;
+          console.log('A new service worker is being installed:',
+            installingWorker);
+        });
+      })
+      .catch(function(error) {
+        console.log('Service worker registration failed:', error);
+      });
+    } else {
+      console.log('Service workers are not supported, switch to Firefox!.');
+    }
+  </script>
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <div class="one-half column" style="margin-top: 25%">
+        <h4>ECOS</h4>
+        <p>
+          Another UI for the <a href="https://github.com/earthChange">Earth Change</a> <a href="https://gitlab.com/Patrick-T-Anderson/earth-change-operating-system">Operating System</a>.
+          See <a href="https://github.com/TheKinDAO/earthChange">earthChangeⒸ</a> for the fungible token (coin).
+        </p>
+        <a class="button button-primary" href="#"  onclick="registerToWebPushNotifications()">Register for Web Push Notifications</a>
+
+        https://web.dev/install-criteria
+      </div>
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
