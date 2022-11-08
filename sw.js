@@ -1,20 +1,12 @@
-self.addEventListener('install', function(e) {
-  e.waitUntil(
-      caches.open('pwa-example').then(function(cache) {
-          return cache.addAll([
-              '/',
-              '/index.html',
-              '/app.js',
-              '/app.css' //Add any other assets your web page needs
-          ]);
-      })
-  );
-});
+self.addEventListener('install', () => {
+    console.log(`installing service worker`);
+})
 
-self.addEventListener('fetch', function(event) {
-  event.respondWith(
-      caches.match(event.request).then(function(response) {
-          return response || fetch(event.request);
-      })
-  );
-});
+self.addEventListener('activate', () => {
+    console.log(`activating service worker`);
+})
+
+self.addEventListener('fetch', event => {
+    console.log(`fetching...
+    ${event.request.url}`);
+})
