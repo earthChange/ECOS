@@ -38,11 +38,19 @@
 
   <!-- Service Worker registration
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <script>
+<script>
     if('serviceWorker' in navigator) {
-        navigator.serviceWorker
-            .register('/serviceworker.js')
-            .then(function() { console.log("Tada! Your service worker is now registered"); });
+        window.addEventListiner('load', () => {
+            navigator.serviceWorker.register('sw.js')
+                .then((registration) => { 
+                    console.log(`service worker registered succesfully ${registration}`) 
+                })
+                .catch((err) => {
+                    console.log(`Error registring ${err}`) 
+                })
+        })
+    } else {
+        console.log(`Service worker is not supported in this browser.`)
     }
 </script>
 
