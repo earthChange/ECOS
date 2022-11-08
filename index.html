@@ -38,23 +38,13 @@
 
   <!-- Service Worker registration
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script async type="text/javascript">
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/serviceworker.js', {scope: '/static_pwa_boilerplate/'})
-      .then(function(registration) {
-        registration.addEventListener('updatefound', function() {
-          var installingWorker = registration.installing;
-          console.log('A new service worker is being installed:',
-            installingWorker);
-        });
-      })
-      .catch(function(error) {
-        console.log('Service worker registration failed:', error);
-      });
-    } else {
-      console.log('Service workers are not supported, switch to Firefox!.');
+    <script>
+    if('serviceWorker' in navigator) {
+        navigator.serviceWorker
+            .register('/serviceworker.js')
+            .then(function() { console.log("Tada! Your service worker is now registered"); });
     }
-  </script>
+</script>
 
 </head>
 <body>
