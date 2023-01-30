@@ -1,6 +1,4 @@
-# ECOS - Earth Change Operating System
-
-https://earthChange.github.io/ECOS
+# [ECOS - Earth Change Operating System](https://docs.google.com/document/d/1yhxEirl_7Y4L6e8Q6CM9E1-aCDov1hn2IRerCEkrzk0/)
 
 
 # Credits
